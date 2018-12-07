@@ -2,10 +2,16 @@
   box-sizing: border-box;
 }
 
+/*
+#263238 darkgray
+#CFD8DC light blue gray
+
+*/
+
 body {
   margin: 0;
-  background: #263238;
-  color: #CFD8DC;
+  background: #FDFDFD;
+  color: #515151;
   font-size: 100%;
   line-height: 1.15;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -30,7 +36,7 @@ div {
 }
 
 h1, h2, h3 {
-  color: #ECEFF1;
+  color: #515151;
 }
 
 h1 span {
@@ -54,7 +60,7 @@ h1 span {
 
 h2 {
   text-transform: uppercase;
-  border-top: 1px solid darkgrey;
+  border-top: 1px solid #7F7F7F;
   font-size: .874em;
   text-align: center;
   line-height: 1;
@@ -62,7 +68,7 @@ h2 {
 }
 
 h2 span {
-  background: #263238;
+  background: #FDFDFD;
   position: relative;
   top: -.45em;
   padding: 0 5%;
@@ -78,7 +84,7 @@ h3 {
 }
 
 h3 span {
-  color: #CFD8DC;
+  color: #7F7F7F;
 }
 
 ul {
@@ -93,7 +99,7 @@ li {
 }
 
 a {
-  color: #CFD8DC;
+  color: #515151;
   text-decoration: none;
 }
 
@@ -112,17 +118,27 @@ a {
   flex-wrap: wrap;
 }
 
-.flexcol1 {
+.flexcol12 {
   width: 100%;
   float: left;
 }
 
-.flexcol2 {
+.flexcol8 {
+  width: 67%;
+  float: left;
+}
+
+.flexcol6 {
   width: 50%;
   float: left;
 }
 
 .flexcol4 {
+  width: 33%;
+  float: left;
+}
+
+.flexcol3 {
   width: 25%;
   float: left;
 }
@@ -132,16 +148,22 @@ a {
 }
 
 @media screen and (max-width: 47.5em) {
-  .short-h2 {
-    margin-right: 0;
-  }
-  .flexcol2 {
-    width: 100%;
-  }
   body {
     font-size: 90%;
   }
+  .short-h2 {
+    margin-right: 0;
+  }
+  .flexcol8 {
+    width: 100%;
+  }
+  .flexcol6 {
+    width: 100%;
+  }
   .flexcol4 {
+    width: 100%;
+  }
+  .flexcol3 {
     width: 50%;
   }
 }
