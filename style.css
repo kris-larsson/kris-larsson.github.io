@@ -18,7 +18,7 @@ body {
 }
 
 section {
-  max-width: 47.5em;
+  max-width: 19.8cm;
   margin: auto;
   padding: 0 1em;
   width: 100%;
@@ -46,7 +46,7 @@ h1 span {
 h1 {
   font-size: 2.747em;
   margin: 0;
-  padding-top: 0.2em;
+  padding-top: 0.4em;
   line-height: 1.1;
   text-transform: uppercase;
 }
@@ -64,8 +64,8 @@ h2 {
   font-size: .874em;
   text-align: center;
   line-height: 1;
-  margin-top: 1.5em;
-  margin-bottom: -0.3em;
+  margin-top: 2em;
+  margin-bottom: 0;
 }
 
 h2 span {
