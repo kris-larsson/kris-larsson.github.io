@@ -46,7 +46,7 @@ h1 span {
 h1 {
   font-size: 2.747em;
   margin: 0;
-  padding-top: 0.5em;
+  padding-top: 0.2em;
   line-height: 1.1;
   text-transform: uppercase;
 }
@@ -54,7 +54,7 @@ h1 {
 h1 span {
   font-size: 0.63em;
   display: block;
-  margin: 1em auto 0 auto;
+  margin: 0.1em auto 0 auto;
   text-transform: none;
 }
 
@@ -64,7 +64,8 @@ h2 {
   font-size: .874em;
   text-align: center;
   line-height: 1;
-  margin-top: 1.953em;
+  margin-top: 1.153em;
+  margin-bottom: -0.3em;
 }
 
 h2 span {
