@@ -150,6 +150,10 @@ a {
   margin-right: 2em;
 }
 
+.margin6px {
+  margin-top: 6px;
+}
+
 @media screen and (max-width: 47.5em) {
   body {
     font-size: 90%;
