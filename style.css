@@ -154,6 +154,15 @@ a {
   margin-top: 6px;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50px 50px;
+  align-items: center;
+  justify-items: center;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 47.5em) {
   body {
     font-size: 90%;
