@@ -115,6 +115,12 @@ a {
   padding-left: 0;
 }
 
+.active {
+  background: whitesmoke;
+  border: 1px;
+  border-style: solid;
+}
+
 .flexcontent {
   display: flex;
   flex-row: row;
