@@ -119,6 +119,7 @@ a {
   background: whitesmoke;
   border: 1px;
   border-style: solid;
+  padding: 0 0.3em;
 }
 
 .flexcontent {
