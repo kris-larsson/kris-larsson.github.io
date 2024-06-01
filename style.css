@@ -12,7 +12,7 @@ body {
   margin: 0;
   background: #FDFDFD;
   color: #515151;
-  font-size: 100%;
+  font-size: 90%;
   line-height: 1.15;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -46,13 +46,13 @@ h1 span {
 h1 {
   font-size: 2.747em;
   margin: 0;
-  padding-top: 1em;
   line-height: 1.1;
   text-transform: uppercase;
+  padding-top: 0.2em;
 }
 
 h1 span {
-  font-size: 0.63em;
+  font-size: 0.33em;
   display: block;
   margin: 0.1em auto 0 auto;
   text-transform: none;
@@ -99,6 +99,7 @@ ul {
 
 li {
   padding: 0 1em 0 0.5em;
+  text-wrap-style: balance;
 }
 
 a {
