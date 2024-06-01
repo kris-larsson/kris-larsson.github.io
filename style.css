@@ -80,12 +80,16 @@ h3 {
   font-style: italic;
   font-weight: 700;
   font-size: 1em;
-  margin-top: 0.5em;
-  margin-bottom: 0.3em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  display: inline-block; /* Allows background and padding */
+  background-color: #333; /* Dark background */
+  color: white;          /* White text */
+  padding: 1px 8px;     /* Add some padding for visual appeal */
+  border-radius: 3px;    /* Optional: rounded corners */
 }
 
 h3 span {
-  color: #515151;
   font-weight: normal;
   font-size: 0.9em;
 }
@@ -114,13 +118,6 @@ a {
 
 .ul-bullets > li {
   padding-left: 0;
-}
-
-.active {
-  background: whitesmoke;
-  border: 1px;
-  border-style: solid;
-  margin-top: -1px;
 }
 
 .flexcontent {
