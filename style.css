@@ -87,6 +87,8 @@ h3 {
   color: white;          /* White text */
   padding: 1px 8px;     /* Add some padding for visual appeal */
   border-radius: 3px;    /* Optional: rounded corners */
+  -webkit-print-color-adjust: exact; /* For Chrome, Safari */
+  print-color-adjust: exact;         /* Standard property */
 }
 
 h3 span {
