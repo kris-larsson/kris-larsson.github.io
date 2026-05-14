@@ -5,13 +5,19 @@
 /*
 #263238 darkgray
 #CFD8DC light blue gray
-
+#1f5e80 accent (Nordic teal-blue)
 */
+
+:root {
+  --accent: #1f5e80;
+  --accent-soft: #e6eff5;
+  --text: #515151;
+}
 
 body {
   margin: 0;
   background: #FDFDFD;
-  color: #515151;
+  color: var(--text);
   font-size: 90%;
   line-height: 1.15;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -28,7 +34,10 @@ header {
   width: 100%;
   float: left;
   margin: auto;
-  text-align:center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--accent-soft) 0%, #fdfdfd 70%);
+  border-radius: 6px;
+  padding-bottom: 0.4em;
 }
 
 div {
@@ -36,11 +45,7 @@ div {
 }
 
 h1, h2, h3 {
-  color: #515151;
-}
-
-h1 span {
-  font-style: italic;
+  color: var(--text);
 }
 
 h1 {
@@ -49,6 +54,8 @@ h1 {
   line-height: 1.1;
   text-transform: uppercase;
   padding-top: 0.2em;
+  color: var(--accent);
+  letter-spacing: 0.5px;
 }
 
 h1 span {
@@ -56,16 +63,19 @@ h1 span {
   display: block;
   margin: 0.1em auto 0 auto;
   text-transform: none;
+  font-style: italic;
+  color: var(--text);
 }
 
 h2 {
   text-transform: uppercase;
-  border-top: 1px solid #7F7F7F;
+  border-top: 1px solid var(--accent);
   font-size: .874em;
   text-align: center;
   line-height: 1;
   margin-top: 1.5em;
   margin-bottom: 0;
+  color: var(--accent);
 }
 
 h2 span {
@@ -74,6 +84,7 @@ h2 span {
   top: -.45em;
   padding: 0 5%;
   margin-top: -1em;
+  letter-spacing: 1px;
 }
 
 h3 {
@@ -82,13 +93,18 @@ h3 {
   font-size: 1em;
   margin-top: 0.1em;
   margin-bottom: 0.1em;
-  display: inline-block; /* Allows background and padding */
-  background-color: #333; /* Dark background */
-  color: white;          /* White text */
-  padding: 1px 8px;     /* Add some padding for visual appeal */
-  border-radius: 3px;    /* Optional: rounded corners */
-  -webkit-print-color-adjust: exact; /* For Chrome, Safari */
-  print-color-adjust: exact;         /* Standard property */
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 1px 8px;
+  border-radius: 3px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  transition: background-color 0.2s ease;
+}
+
+h3:hover {
+  background-color: #163f55;
 }
 
 h3 span {
@@ -100,7 +116,7 @@ ul {
   list-style: none;
   padding: 0;
   font-size: 0.9em;
-  margin-top: 0.3em
+  margin-top: 0.3em;
 }
 
 li {
@@ -111,15 +127,49 @@ li {
 a {
   color: inherit;
   text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .ul-bullets {
-  list-style: circle;
-  margin-left: 1.2em;
+  list-style: none;
+  margin-left: 0.4em;
 }
 
 .ul-bullets > li {
-  padding-left: 0;
+  position: relative;
+  padding-left: 1em;
+  border-left: 2px solid transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  border-radius: 2px;
+}
+
+.ul-bullets > li::before {
+  content: "\25E6"; /* small open circle */
+  position: absolute;
+  left: 0.1em;
+  color: var(--accent);
+  font-size: 1.1em;
+  line-height: 1.1;
+  transition: color 0.2s ease;
+}
+
+.ul-bullets > li:hover {
+  border-left-color: var(--accent);
+  background-color: var(--accent-soft);
+}
+
+.ul-bullets > li:hover::before {
+  color: #163f55;
+}
+
+.ul-bullets > li b {
+  color: var(--accent);
 }
 
 .flexcontent {
@@ -172,5 +222,104 @@ a {
   }
   .flexcol3 {
     width: 50%;
+  }
+}
+
+/* Print: strip the online flair, fill an A4 nicely */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.2cm;
+  }
+
+  body {
+    background: white;
+    color: #000;
+    font-size: 84%;
+    line-height: 1.15;
+  }
+
+  section {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  header {
+    background: none;
+    border-radius: 0;
+    padding-bottom: 0.1em;
+  }
+
+  h1, h2, h3 {
+    color: #000;
+  }
+
+  h1 {
+    font-size: 2.3em;
+    letter-spacing: 0;
+  }
+
+  h1 span {
+    color: #333;
+  }
+
+  h2 {
+    border-top: 1px solid #7F7F7F;
+    color: #000;
+    margin-top: 0.8em;
+  }
+
+  h2 span {
+    background: white;
+  }
+
+  h3 {
+    background-color: #333;
+    color: white;
+    margin-top: 0.25em;
+  }
+
+  ul {
+    font-size: 0.92em;
+    margin-top: 0.25em;
+    margin-bottom: 0.35em;
+  }
+
+  li {
+    page-break-inside: avoid;
+    margin-bottom: 0.05em;
+  }
+
+  .ul-bullets {
+    list-style: circle;
+    margin-left: 1.2em;
+  }
+
+  .ul-bullets > li {
+    padding-left: 0;
+    border-left: none;
+    background: none;
+  }
+
+  .ul-bullets > li::before {
+    content: none;
+  }
+
+  .ul-bullets > li b {
+    color: #000;
+  }
+
+  a {
+    border-bottom: none;
+    color: inherit;
+  }
+
+  a:hover {
+    color: inherit;
+    border-bottom: none;
+  }
+
+  h3:hover {
+    background-color: #333;
   }
 }
