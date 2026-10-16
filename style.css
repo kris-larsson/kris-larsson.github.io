@@ -67,6 +67,13 @@ h1 span {
   color: var(--text);
 }
 
+h1 span.headline {
+  font-size: 0.4em;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--accent);
+}
+
 h2 {
   text-transform: uppercase;
   border-top: 1px solid var(--accent);
@@ -237,11 +244,18 @@ a:hover {
     color: #000;
     font-size: 84%;
     line-height: 1.15;
+    /* Ligatures (ff, fi) extract as single glyphs and break keyword matching */
+    font-variant-ligatures: none;
   }
 
   section {
     max-width: 100%;
     padding: 0;
+  }
+
+  /* Single column so ATS/LLM parsers read the PDF top to bottom */
+  .flexcol8, .flexcol6, .flexcol4 {
+    width: 100%;
   }
 
   header {
